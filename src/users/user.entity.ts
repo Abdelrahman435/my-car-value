@@ -6,6 +6,7 @@ import {
   Column,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Exclude } from 'class-transformer';
 
 @Entity() // Mark a class as a Entity
 export class User {
@@ -16,6 +17,7 @@ export class User {
   email: string;
 
   @Column()
+  @Exclude() // when ever get an instance of user and turn it to plain object and then into JSON just Exclude the password
   password: string;
 
   @AfterInsert() // this is hooks
