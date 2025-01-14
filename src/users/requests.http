@@ -3,10 +3,24 @@ POST  http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email":"test@example.com",
+    "email":"test1@example.com",
     "password": "test0000"
 }
 
+### signin
+Post http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email":"test1@example.com",
+    "password": "test0000"
+}
+
+### Get the current signed in user
+Get http://localhost:3000/auth/whoami
+
+### sign out
+Post http://localhost:3000/auth/signout
 
 ### find a particular user
 GET http://localhost:3000/auth/3
@@ -25,3 +39,8 @@ content-type: application/json
     "email":"sara❤️@example.com"
 }
 
+### Set a color
+GET http://localhost:3000/auth/colors/blue
+
+### Get the color
+GET http://localhost:3000/auth/color
